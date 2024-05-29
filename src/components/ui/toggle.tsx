@@ -6,7 +6,7 @@ type ToggleVoid = {
 }
 const Toggle = ({ handleToggle }: ToggleVoid) => {
   return (
-    <div className='bg-blue-500 p-2 rounded' onClick = { handleToggle }>
+    <div className='bg-transparent p-2 rounded' onClick = { handleToggle }>
       <Menu className='h-5 text-white' />
     </div>
   )
