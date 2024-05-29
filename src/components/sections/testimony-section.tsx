@@ -36,11 +36,8 @@ const TestimonySection = () => {
                     delay: 3000,
                     disableOnInteraction: false,
                 }}
-                pagination = {{
-                    el:'.swiper-pagination',
-                    clickable: true,
-                }}
-                modules = {[Autoplay, Pagination, Navigation]}
+                
+                modules = {[Autoplay]}
                 className = 'mySwiper'
               >
               {testimonies.map((item, index) => (
@@ -70,9 +67,10 @@ const TestimonySection = () => {
               ))}
             </Swiper>
           {/* navigation buttons */}
-          <div className='btn-wrapper lg:mt-5'>
+            
+            {/* <div className='btn-wrapper lg:mt-5'>
              <div className='swiper-pagination'></div>
-          </div>
+          </div> */}
       </div>
         {/* testimonial wrapper ends here */}
     </div>
