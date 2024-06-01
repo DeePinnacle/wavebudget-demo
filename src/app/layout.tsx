@@ -6,8 +6,8 @@ import Footer from '@/components/sections/footer'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Wavebudget",
-  description: "Wavebudget fin-tech",
+  title: "WaveBudget",
+  description: "your easy way to financial wellness",
 };
 
 export default function RootLayout({
