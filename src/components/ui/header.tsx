@@ -13,7 +13,7 @@ const Header = () => {
     <div className='Navbar'>    
       <div className='flex flex-row justify-between items-center p-2 md:hidden'>
         <Logo />
-        <Toggle handleToggle = { handleToggle } />
+        <Toggle handleToggle = { handleToggle } toggle = { toggle } />
       </div>
       {/* toggle */}
       <div className = { `${ toggle ? 'block' : 'hidden'}` } >

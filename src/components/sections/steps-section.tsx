@@ -18,8 +18,8 @@ const StepsSection = () => {
           />
         </div>
         <div className="gap-3">
-          {data.map((item) => (
-            <div className="p-2 my-3 border-t border-b border-r border-l-[16px] border-s-[#ED9613] border-y-black border-r-black lg:w-4/5">
+          {data.map((item, index) => (
+            <div key={ index } className="p-2 my-3 border-t border-b border-r border-l-[16px] border-s-[#ED9613] border-y-black border-r-black lg:w-4/5">
               <p className="my-4 px-3 text-white text-lg font-medium md:text-2xl md:font-bold lg:text-base">
                 {item.title}
               </p>

@@ -25,7 +25,7 @@ const Navbar = () => {
                 <Link href="/faqs" className='anchor'>FAQs</Link>
               </li>
           </ul>
-        <Link href='/' className='text-white font-bold'>Sign Up</Link>
+        <Link href='/' className='text-white font-bold text-center'>Sign Up</Link>
       </div>
     </div>
   )

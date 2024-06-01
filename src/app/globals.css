@@ -74,28 +74,15 @@
       @apply bg-background text-foreground;
     }
   }
-
-  @layer base{
-    .contact-info-wrapper{
-      @apply p-2
-    }
-    .item-list li{
-      @apply text-white p-2 mx-4
-    }
-    .Navbar-list {
-      text-align: center;
-    }
-    .Navbar-list .list{
-      margin: 10px;
-      padding: 6px;
-      transition: all .5s linear;
-    }
-    .Navbar-list .list .anchor {
-      display: block; 
-      @apply text-white
-    }
-    /* .Navbar-list .list:hover {
-      @apply bg-blue-500 text-blue-100;
-      border-radius: 8px;
-    } */
+  .Navbar-list {
+    text-align: center;
+  }
+  .Navbar-list .list{
+    margin: 10px;
+    padding: 10px;
+    transition: all .5s linear;
+  }
+  .Navbar-list .list .anchor {
+    display: block; 
+    @apply text-white
   }

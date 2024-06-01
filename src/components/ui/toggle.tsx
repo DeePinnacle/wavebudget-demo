@@ -1,13 +1,20 @@
 import React from 'react'
-import { Menu } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 type ToggleVoid = {
+  toggle: Boolean,
   handleToggle: () => void;
 }
-const Toggle = ({ handleToggle }: ToggleVoid) => {
+const Toggle = ({ handleToggle, toggle }: ToggleVoid) => {
   return (
-    <div className='bg-blue-500 p-2 rounded' onClick = { handleToggle }>
-      <Menu className='h-5 text-white' />
+    <div className='p-2 rounded' onClick = { handleToggle }>
+      {
+        toggle === false ? (
+            <Menu className='h-8 w-8 cursor-pointer text-white' onClick = { handleToggle } />
+        ) : (
+            <X className='h-8 w-8 cursor-pointer text-white' onClick = { handleToggle } />
+        )
+      }
     </div>
   )
 }

@@ -1,11 +1,17 @@
 import Image from 'next/image'
+import ImageLogo from '/public/logo.png'
 const Logo = () => {
     return (
-        <div className='flex flex-row gap-2 items-center lg:w-40'>
-            <div className='relative w-20 h-20 overflow-hidden'>
-                <Image src='/logo.png' alt='navbar log' fill priority className='object-contain' />
-            </div>
-            <p className='uppercase font-bold text-base text-white'>Wave <br />Budget</p>
+        <div className='relative -left-14 w-36 h-10 flex flex-row items-center'>
+            <Image 
+                src={ ImageLogo }
+                alt='logo image'
+                priority
+                fill
+                className='object-cover'
+                
+            />
+            <span className='text-white font-bold text-xs uppercase absolute left-28'>Wave<br />Budget</span>
         </div>
     )
 }
