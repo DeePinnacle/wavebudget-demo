@@ -15,9 +15,23 @@ import { Button } from "../ui/button";
 
 import Header from "@/components/ui/header";
 
-import { motion } from "framer-motion";
+import { 
+  motion,
+  useScroll,
+  useTransform,
+  } from "framer-motion";
+
+
+  import { useRef } from 'react'
 
 const HeroSection = () => {
+  const ref = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"]
+  })
+  // const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1])
+
   return (
     <>
       <section className="bg-[#174E4B] w-full min-h-[34.375rem] p-2">
@@ -45,15 +59,15 @@ const HeroSection = () => {
                       <p className="text-base leading-normal mb-4 md:text-xl md:leading-relaxed">
                         {content.tagline}
                       </p>
-                      <div className="flex flex-col justify-between gap-3 my-5">
+                      <div className="flex flex-row gap-3 my-5 md:flex-col">
                         <Button
-                          className="bg-[#008B8B] hover:bg-[#008B8B] md:w-3/5 md:py-8 md:text-xl"
+                          className="bg-[#008B8B] w-2/5 hover:bg-[#008B8B] md:w-3/5 md:py-8 md:text-xl"
                           size="lg"
                         >
                           Start shopping now
                         </Button>
                         <Button
-                          className="bg-white hover:bg-white text-[#008B8B] md:w-3/5 md:py-8 md:text-xl"
+                          className="bg-white w-1/2 hover:bg-white text-[#008B8B] md:w-3/5 md:py-8 md:text-xl"
                           size="lg"
                         >
                           I have a question
@@ -111,21 +125,14 @@ const HeroSection = () => {
             Wavebudget is easier , affordable, faster and reliable
           </h2>
         </div>
-        <div className="lg:grid lg:grid-cols-3">
-          <motion.div
-            initial={{
-              x: -300,
-              opacity: 0,
-              scale: 0.5,
-            }}
-            animate={{
-              x: 0,
-              opacity: 1,
-              scale: 1,
-            }}
-            transition={{
-              duration: 1.5,
-            }}
+        <motion.div 
+                  ref = { ref }
+                  style = {{
+                      scale: scrollYProgress,
+                      opacity: scrollYProgress
+                    }} 
+          className="lg:grid lg:grid-cols-3">
+          <div
             className="mt-28 mb-10 p-2"
           >
             <div className="relative bg-[#008B8B] min-h-20 mx-auto p-2 rounded-md mt-14 lg:h-96">
@@ -156,8 +163,9 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
-          <div className="mt-16 mb-10 p-2 md:mt-28">
+          </div>
+          <div
+            className="mt-16 mb-10 p-2 md:mt-28">
             <div className="relative bg-[#008B8B] min-h-20 mx-auto p-2 rounded-md mt-14 lg:h-96">
               <div className="absolute -top-1/4 left-1/2 -translate-x-1/2 bg-[#F5F5F5] w-[9.375rem] h-[9.375rem] rounded-full flex flex-col items-center justify-center lg:-top-20">
                 <DollarIcon />
@@ -180,7 +188,8 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="mt-16 mb-10 p-2 md:mt-28">
+          <div
+            className="mt-16 mb-10 p-2 md:mt-28">
             <div className="relative bg-[#008B8B] min-h-20 mx-auto p-2 rounded-md mt-14 lg:h-96">
               <div className="absolute -top-1/4 left-1/2 -translate-x-1/2 bg-[#F5F5F5] w-[9.375rem] h-[9.375rem] rounded-full flex flex-col items-center justify-center lg:-top-20">
                 <VanIcon />
@@ -203,7 +212,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
