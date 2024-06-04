@@ -26,6 +26,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
       - uses: actions/checkout@v1
+      - run: npm i sharp
       - run: npm install
       - run: npm run build
     # - run: npm test
