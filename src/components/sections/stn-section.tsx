@@ -1,8 +1,22 @@
+'use client'
 import { stnData } from '@/config/data'
 import { Button } from '../ui/button';
+
+import { motion } from 'framer-motion'
 const StnSection = () =>{
     return (
-        <div className='bg-[#C0DDDB] px-2 py-6 lg:grid lg:grid-cols-2 lg:gap-3'>
+        <motion.div 
+            initial = {{
+                x: '-100%'
+            }}
+            whileInView = {{
+                x: 0
+            }}
+            transition = {{
+                duration: 1,
+                ease: "easeIn"
+            }}
+            className='bg-[#C0DDDB] px-2 py-6 lg:grid lg:grid-cols-2 lg:gap-3'>
             <div className='stn p-2'>
                 <h1 className='uppercase font-bold font-sans text-xl text-center md:text-2xl lg:mt-8'>SOCIAL TRUST NETWORK (STN)</h1>
                 <p className='text-center my-5 md:text-[1.375rem] lg:text-lg'>Bank on your TRUST to access affordable loans </p>
@@ -27,7 +41,7 @@ const StnSection = () =>{
                     today and be consistent towards it.
                 </p>
             </div>
-        </div>
+        </motion.div>
     )
 }
 export default StnSection;

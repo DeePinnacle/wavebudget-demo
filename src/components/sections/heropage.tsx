@@ -25,16 +25,28 @@ import {
   import { useRef } from 'react'
 
 const HeroSection = () => {
-  const ref = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 1", "1.33 1"]
-  })
+  // const ref = useRef<HTMLDivElement>(null)
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["0 1", "1.33 1"]
+  // })
   // const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.5, 1])
 
   return (
     <>
-      <section className="bg-[#174E4B] w-full min-h-[34.375rem] p-2">
+      <motion.section 
+      initial = {{
+        scale: 0,
+        opacity: 0
+      }}
+      animate = {{
+        scale: 1,
+        opacity: 1
+      }}
+      transition = {{
+        duration: 1
+      }}
+      className="bg-[#174E4B] w-full min-h-[34.375rem] p-2">
         <Header />
         <div className="p-2">
           <Swiper
@@ -118,21 +130,26 @@ const HeroSection = () => {
             ))}
           </Swiper>
         </div>
-      </section>
+      </motion.section>
       <div className="b-white p-2 my-5">
         <div className="flex flex-col items-center lg:w-3/5 lg:mx-auto">
           <h2 className="text-2xl text-center font-bold max-w-prose md:text-4xl md:mt-5 lg:text-[2.375rem]">
             Wavebudget is easier , affordable, faster and reliable
           </h2>
         </div>
-        <motion.div 
-                  ref = { ref }
-                  style = {{
-                      scale: scrollYProgress,
-                      opacity: scrollYProgress
-                    }} 
+        <div 
           className="lg:grid lg:grid-cols-3">
-          <div
+          <motion.div
+          initial = {{
+            x: '-100%',
+          }}
+          whileInView={{
+            x: 0,
+          }}
+          transition = {{
+            duration: 1,
+            ease: "easeIn"
+          }}
             className="mt-28 mb-10 p-2"
           >
             <div className="relative bg-[#008B8B] min-h-20 mx-auto p-2 rounded-md mt-14 lg:h-96">
@@ -163,10 +180,21 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
           <div
             className="mt-16 mb-10 p-2 md:mt-28">
-            <div className="relative bg-[#008B8B] min-h-20 mx-auto p-2 rounded-md mt-14 lg:h-96">
+            <motion.div 
+              initial = {{
+                x: '100%'
+              }}
+              whileInView={{
+                x: 0,
+              }}
+              transition = {{
+                duration: 1,
+                ease: "circIn"
+              }}
+              className="relative bg-[#008B8B] min-h-20 mx-auto p-2 rounded-md mt-14 lg:h-96">
               <div className="absolute -top-1/4 left-1/2 -translate-x-1/2 bg-[#F5F5F5] w-[9.375rem] h-[9.375rem] rounded-full flex flex-col items-center justify-center lg:-top-20">
                 <DollarIcon />
               </div>
@@ -186,11 +214,22 @@ const HeroSection = () => {
                   </Button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div
             className="mt-16 mb-10 p-2 md:mt-28">
-            <div className="relative bg-[#008B8B] min-h-20 mx-auto p-2 rounded-md mt-14 lg:h-96">
+            <motion.div 
+              initial={{
+                x: "-100%",
+              }}
+              whileInView = {{
+                x: 0
+              }}
+              transition = {{
+                duration: 1,
+                ease: "easeIn"
+              }}
+              className="relative bg-[#008B8B] min-h-20 mx-auto p-2 rounded-md mt-14 lg:h-96">
               <div className="absolute -top-1/4 left-1/2 -translate-x-1/2 bg-[#F5F5F5] w-[9.375rem] h-[9.375rem] rounded-full flex flex-col items-center justify-center lg:-top-20">
                 <VanIcon />
               </div>
@@ -210,9 +249,9 @@ const HeroSection = () => {
                   </Button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </>
   );

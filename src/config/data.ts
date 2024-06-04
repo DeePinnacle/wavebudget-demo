@@ -43,37 +43,25 @@ export const zeropay = [
 
     {
         title: 'Buy items on credit with no initial payment!',
-        image: SuperMarket,
         list: [
             {
                 month: 'Payback in 2 months',
                 delivery: 'Instant delivery / pick up',
                 budget: 'Buy on credit from WaveBudget store or from any store near you.'
+            }
+        ],
+        images: [
+            {
+                image: SuperMarket
+            },
+            {
+                image: Moolah
+            },
+            {
+                image: Rice
             }
         ]
     },
-    {
-        title: 'Buy items on credit with no initial payment!',
-        image: Moolah,
-        list: [
-            {
-                month: 'Payback in 2 months',
-                delivery: 'Instant delivery / pick up',
-                budget: 'Buy on credit from WaveBudget store or from any store near you.'
-            }
-        ]
-    },
-    {
-        title: 'Buy items on credit with no initial payment!',
-        image: Rice,
-        list: [
-            {
-                month: 'Payback in 2 months',
-                delivery: 'Instant delivery / pick up',
-                budget: 'Buy on credit from WaveBudget store or from any store near you.'
-            }
-        ]
-    }
 
 ]
 
@@ -81,31 +69,21 @@ export const flexipay = [
 
     {
         title: 'Buy items on credit with just 50% initial payment!',
-        image: Blender,
         list: [
             {
                 duration: 'Maximum loan up to 700,000 Naira',
                 budget: 'Buy on credit from WaveBudget store or from any store near you.'
             }
-        ]
-    },
-    {
-        title: 'Buy items on credit with just 50% initial payment!',
-        image: Electronics,
-        list: [
+        ],
+        images: [
             {
-                duration: 'Maximum loan up to 700,000 Naira',
-                budget: 'Buy on credit from WaveBudget store or from any store near you.'
-            }
-        ]
-    },
-    {
-        title: 'Buy items on credit with just 50% initial payment!',
-        image: Electricals,
-        list: [
+                image: Blender
+            },
             {
-                duration: 'Maximum loan up to 700,000 Naira',
-                budget: 'Buy on credit from WaveBudget store or from any store near you.'
+                image: Electronics
+            },
+            {
+                image: Electricals
             }
         ]
     }
@@ -115,34 +93,22 @@ export const flexipay = [
 export const savesmall = [
     {
         title: 'Save small small at your convenience to buy items on wavebudget',
-        image: Ladies,
         list: [
             {
                 budget: 'Manage your shopping budgets on the go',
                 discount: 'Enjoy up to 10% discount on your purchase',
                 savings: 'Save towards your shopping expenses seamlessly'
             }
-        ]
-    },
-    {
-        title: 'Save small small at your convenience to buy items on wavebudget',
-        image: LaptopGuy,
-        list: [
+        ],
+        images: [
             {
-                budget: 'Manage your shopping budgets on the go',
-                discount: 'Enjoy up to 10% discount on your purchase',
-                savings: 'Save towards your shopping expenses seamlessly'
-            }
-        ]
-    },
-    {
-        title: 'Save small small at your convenience to buy items on wavebudget',
-        image: Ladies,
-        list: [
+                image: Ladies
+            },
             {
-                budget: 'Manage your shopping budgets on the go',
-                discount: 'Enjoy up to 10% discount on your purchase',
-                savings: 'Save towards your shopping expenses seamlessly'
+                image: LaptopGuy
+            },
+            {
+                image: Ladies
             }
         ]
     }

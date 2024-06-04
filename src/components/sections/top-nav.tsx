@@ -6,7 +6,7 @@ import {
 import { Button } from "@/components/ui/button"
 const TopNav = () => {
     return (
-        <div className="bg-white py-2 px-5 flex flex-row gap-3 items-center justify-between">
+        <div className="hidden md:bg-white md:py-2 md:px-5 md:flex md:flex-row md:gap-3 md:items-center md:justify-between">
             <div className="contact-info-wrapper md:flex md:flex-row md:gap-8 md:items-center">
                 <div className="flex flex-row gap-2 items-center my-3">
                     <HeadPhoneIcon />

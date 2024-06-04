@@ -11,14 +11,7 @@ import {
 import { useRef } from 'react'
 
 const StepsSection = () => {
-  const ref = useRef<HTMLDivElement>(null)
 
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "start end"]
-  })
-
-  const rotate = useTransform(scrollYProgress, [0, 1], ["0deg", "180deg"])
 
   return (
     <div className="bg-[#008B8B] px-2 py-8">
@@ -27,15 +20,17 @@ const StepsSection = () => {
       </h1>
       <div className='lg:grid lg:grid-cols-2 lg:items-center lg:gap-3'>
         <motion.div 
-          ref = { ref }
-          style = {{
-            rotate
-          }}
           initial = {{
-            x: -300
+            scale: 0,
+            opacity: 0
           }}
-          animate = {{
-            x: 0
+          whileInView = {{
+            scale: 1,
+            opacity: 1
+          }}
+          transition = {{
+            duration: 1,
+            ease: "easeIn"
           }}
           className="relative w-96 h-96 overflow-hidden mx-auto lg:order-last">
           <Image
@@ -46,7 +41,18 @@ const StepsSection = () => {
             className="object-cover"
           />
         </motion.div>
-        <div className="gap-3">
+        <motion.div 
+          initial = {{
+            x: "-100%"
+          }}
+          whileInView = {{
+            x: 0
+          }}
+          transition = {{
+            duration: 1,
+            ease: "easeIn"
+          }}
+          className="gap-3">
           {data.map((item, index) => (
             <div key={ index } className="p-2 my-3 border-t border-b border-r border-l-[16px] border-s-[#ED9613] border-y-black border-r-black lg:w-4/5">
               <p className="my-4 px-3 text-white text-lg font-medium md:text-2xl md:font-bold lg:text-base">
@@ -55,7 +61,7 @@ const StepsSection = () => {
               <p className="px-3 mb-3 text-white md:text-[1.375rem] md:font-extralight lg:text-sm">{item.description}</p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
       <div className='mx-auto w-3/4'>
         <Button className='bg-white text-black px-5 my-5 mx-auto'>Lets split the bills together!</Button>
