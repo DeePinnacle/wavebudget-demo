@@ -1,11 +1,11 @@
-import SuperMarket from '/supermarket.png'
-import Moolah from '/moolah.png'
-import Rice from '/rice.png'
-import Electronics from '/electronics.png'
-import Blender from '/blender.jpg'
-import Electricals from '/elect.jpg'
-import Ladies from '/ladies.jpg'
-import LaptopGuy from '/laptop-guy.jpg'
+import SuperMarket from '/public/supermarket.png'
+import Moolah from '/public/moolah.png'
+import Rice from '/public/rice.png'
+import Electronics from '/public/electronics.png'
+import Blender from '/public/blender.jpg'
+import Electricals from '/public/elect.jpg'
+import Ladies from '/public/ladies.jpg'
+import LaptopGuy from '/public/laptop-guy.jpg'
 import HeroImage1 from '/public/women-heroimage.jpg'
 import HeroImage2 from '/public/blender-heroimage.jpg'
 import HeroImage3 from '/public/watch-heroimage.jpg'
@@ -43,25 +43,37 @@ export const zeropay = [
 
     {
         title: 'Buy items on credit with no initial payment!',
+        image: SuperMarket,
         list: [
             {
                 month: 'Payback in 2 months',
                 delivery: 'Instant delivery / pick up',
                 budget: 'Buy on credit from WaveBudget store or from any store near you.'
             }
-        ],
-        images: [
+        ]
+    },
+    {
+        title: 'Buy items on credit with no initial payment!',
+        image: Moolah,
+        list: [
             {
-                image: SuperMarket
-            },
-            {
-                image: Moolah
-            },
-            {
-                image: Rice
+                month: 'Payback in 2 months',
+                delivery: 'Instant delivery / pick up',
+                budget: 'Buy on credit from WaveBudget store or from any store near you.'
             }
         ]
     },
+    {
+        title: 'Buy items on credit with no initial payment!',
+        image: Rice,
+        list: [
+            {
+                month: 'Payback in 2 months',
+                delivery: 'Instant delivery / pick up',
+                budget: 'Buy on credit from WaveBudget store or from any store near you.'
+            }
+        ]
+    }
 
 ]
 
@@ -69,21 +81,31 @@ export const flexipay = [
 
     {
         title: 'Buy items on credit with just 50% initial payment!',
+        image: Blender,
         list: [
             {
                 duration: 'Maximum loan up to 700,000 Naira',
                 budget: 'Buy on credit from WaveBudget store or from any store near you.'
             }
-        ],
-        images: [
+        ]
+    },
+    {
+        title: 'Buy items on credit with just 50% initial payment!',
+        image: Electronics,
+        list: [
             {
-                image: Blender
-            },
+                duration: 'Maximum loan up to 700,000 Naira',
+                budget: 'Buy on credit from WaveBudget store or from any store near you.'
+            }
+        ]
+    },
+    {
+        title: 'Buy items on credit with just 50% initial payment!',
+        image: Electricals,
+        list: [
             {
-                image: Electronics
-            },
-            {
-                image: Electricals
+                duration: 'Maximum loan up to 700,000 Naira',
+                budget: 'Buy on credit from WaveBudget store or from any store near you.'
             }
         ]
     }
@@ -93,22 +115,34 @@ export const flexipay = [
 export const savesmall = [
     {
         title: 'Save small small at your convenience to buy items on wavebudget',
+        image: Ladies,
         list: [
             {
                 budget: 'Manage your shopping budgets on the go',
                 discount: 'Enjoy up to 10% discount on your purchase',
                 savings: 'Save towards your shopping expenses seamlessly'
             }
-        ],
-        images: [
+        ]
+    },
+    {
+        title: 'Save small small at your convenience to buy items on wavebudget',
+        image: LaptopGuy,
+        list: [
             {
-                image: Ladies
-            },
+                budget: 'Manage your shopping budgets on the go',
+                discount: 'Enjoy up to 10% discount on your purchase',
+                savings: 'Save towards your shopping expenses seamlessly'
+            }
+        ]
+    },
+    {
+        title: 'Save small small at your convenience to buy items on wavebudget',
+        image: Ladies,
+        list: [
             {
-                image: LaptopGuy
-            },
-            {
-                image: Ladies
+                budget: 'Manage your shopping budgets on the go',
+                discount: 'Enjoy up to 10% discount on your purchase',
+                savings: 'Save towards your shopping expenses seamlessly'
             }
         ]
     }
