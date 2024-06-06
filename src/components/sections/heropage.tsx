@@ -86,12 +86,14 @@ const HeroSection = () => {
                         <Button
                           className="bg-[#008B8B] w-2/5 hover:bg-[#008B8B] md:w-3/5 md:py-8 md:text-xl"
                           size="lg"
+                          onClick ={ handleShopNowRoute }
                         >
                           Start shopping now
                         </Button>
                         <Button
                           className="bg-white w-1/2 hover:bg-white text-[#008B8B] md:w-3/5 md:py-8 md:text-xl"
                           size="lg"
+                          onClick = { handleQuestionRoute }
                         >
                           I have a question
                         </Button>
