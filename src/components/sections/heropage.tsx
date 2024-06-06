@@ -14,6 +14,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 
 import Header from "@/components/ui/header";
+import { useRouter } from "next/navigation"
 
 import { 
   motion,
@@ -25,6 +26,16 @@ import {
   import { useRef } from 'react'
 
 const HeroSection = () => {
+  const router = useRouter()
+
+  const handleShopNowRoute = () =>{
+    router.push("https://selar.co/m/wavebudget-limited1")
+  }
+
+  const handleQuestionRoute = () =>{
+    router.push("Https://wa.me/+2348137960202")
+  }
+    
   // const ref = useRef<HTMLDivElement>(null)
   // const { scrollYProgress } = useScroll({
   //   target: ref,
