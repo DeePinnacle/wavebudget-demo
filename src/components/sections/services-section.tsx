@@ -13,8 +13,6 @@ import {
  import 'swiper/css/pagination';
  import 'swiper/css/navigation';
  import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
-import { Key } from 'react';
 
 
 const ServicesSection = ()=>{
@@ -66,8 +64,8 @@ const ServicesSection = ()=>{
                                     className = 'mySwiper'
                                 >                                    
                                     {   
-                                        items.image.map((img: { image: string | StaticImport; }, index: Key | null | undefined) => (
-                                            <SwiperSlide key = {index}>
+                                        items.images.map((img, index)=>(
+                                            <SwiperSlide key = { index }>
                                                 <div className='relative w-full h-96 overflow-hidden mx-auto md:h-[31.25rem]'>
                                                     <Image 
                                                     src={img.image}
