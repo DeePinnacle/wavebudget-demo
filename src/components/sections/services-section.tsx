@@ -64,8 +64,8 @@ const ServicesSection = ()=>{
                                     className = 'mySwiper'
                                 >                                    
                                     {   
-                                        items.images.map((img, index)=>(
-                                            <SwiperSlide key = { index }>
+                                        items.images.map((img, index) => (
+                                            <SwiperSlide key = {index}>
                                                 <div className='relative w-full h-96 overflow-hidden mx-auto md:h-[31.25rem]'>
                                                     <Image 
                                                     src={img.image}
