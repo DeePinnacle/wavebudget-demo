@@ -10,7 +10,7 @@ const Navbar = () => {
           </div>
           <ul className="Navbar-list md:flex md:flex-row md:items-center md:gap-4">
               <li className="list">
-                  <Link href="/" className='anchor'>Shop now</Link>
+                  <Link href="https://selar.co/m/wavebudget-limited1" className='anchor'>Shop now</Link>
               </li>
               <li className="list">
                 <Link href="/services" className='anchor'>Our Services</Link>
@@ -25,7 +25,7 @@ const Navbar = () => {
                 <Link href="/faqs" className='anchor'>FAQs</Link>
               </li>
           </ul>
-        <Link href='/' className='text-white font-bold text-center'>Sign Up</Link>
+        <Link href='https://forms.gle/rsysG4E2fPrggv9g9' className='text-white font-bold text-center'>Sign Up</Link>
       </div>
     </div>
   )

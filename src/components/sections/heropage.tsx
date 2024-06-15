@@ -151,7 +151,7 @@ const HeroSection = () => {
           </h2>
         </div>
         <div 
-          className="lg:grid lg:grid-cols-3">
+          className="overflow-x-hidden lg:grid lg:grid-cols-3 lg:gap-2">
           <motion.div
           initial = {{
             x: '-100%',
@@ -174,14 +174,14 @@ const HeroSection = () => {
                   <p className="text-white text-lg text-center font-medium mb-3 md:text-3xl md:mb-8 lg:text-lg">
                     Easy Registration in 10 minutes!
                   </p>
-                  <ul className="item-list md:ml-24 lg:ml-3">
-                    <li className="text-white ml-10 py-2 md:text-2xl md:my-3 lg:text-sm">
+                  <ul className="item-list">
+                    <li className="text-white text-center py-2 md:text-2xl md:my-3 lg:text-sm">
                       Basic information
                     </li>
-                    <li className="text-white ml-10 py-2 md:text-2xl md:my-3 lg:text-sm">
+                    <li className="text-white text-center py-2 md:text-2xl md:my-3 lg:text-sm">
                       Two STN guarantors
                     </li>
-                    <li className="text-white ml-10 py-2 md:text-2xl md:my-3 lg:text-sm">
+                    <li className="text-white text-center py-2 md:text-2xl md:my-3 lg:text-sm">
                       Choose a savings plan
                     </li>
                   </ul>
@@ -194,11 +194,9 @@ const HeroSection = () => {
               </div>
             </div>
           </motion.div>
-          <div
-            className="mt-16 mb-10 p-2 md:mt-28">
-            <motion.div 
+          <motion.div
               initial = {{
-                x: '100%'
+                x: '200%'
               }}
               whileInView={{
                 x: 0,
@@ -207,6 +205,8 @@ const HeroSection = () => {
                 duration: 1,
                 ease: "circIn"
               }}
+            className="mt-16 mb-10 p-2 md:mt-28">
+            <div 
               className="relative bg-[#008B8B] min-h-20 mx-auto p-2 rounded-md mt-14 lg:h-96">
               <div className="absolute -top-1/4 left-1/2 -translate-x-1/2 bg-[#F5F5F5] w-[9.375rem] h-[9.375rem] rounded-full flex flex-col items-center justify-center lg:-top-20">
                 <DollarIcon />
@@ -227,21 +227,21 @@ const HeroSection = () => {
                   </Button>
                 </div>
               </div>
-            </motion.div>
-          </div>
-          <div
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{
+              x: "-100%",
+            }}
+            whileInView = {{
+              x: 0
+            }}
+            transition = {{
+              duration: 1,
+              ease: "easeIn"
+            }}
             className="mt-16 mb-10 p-2 md:mt-28">
-            <motion.div 
-              initial={{
-                x: "-100%",
-              }}
-              whileInView = {{
-                x: 0
-              }}
-              transition = {{
-                duration: 1,
-                ease: "easeIn"
-              }}
+            <div 
               className="relative bg-[#008B8B] min-h-20 mx-auto p-2 rounded-md mt-14 lg:h-96">
               <div className="absolute -top-1/4 left-1/2 -translate-x-1/2 bg-[#F5F5F5] w-[9.375rem] h-[9.375rem] rounded-full flex flex-col items-center justify-center lg:-top-20">
                 <VanIcon />
@@ -262,8 +262,8 @@ const HeroSection = () => {
                   </Button>
                 </div>
               </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </>

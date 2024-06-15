@@ -17,15 +17,15 @@ const Footer = () => {
           </h4>
           <p className="md:text-[1.375rem] lg:text-base lg:text-center">
             {/* Saint James House, Ademola Adetokunbo, Wuse 2, Abuja. */}
-            ************************************************
+            Shop 27, Nulge shoppin complex,Tunga, Minna, Niger state.
           </p>
-          <h4 className="my-4 font-bold capitalize md:text-xl lg:text-md lg:text-center">
+          {/* <h4 className="my-4 font-bold capitalize md:text-xl lg:text-md lg:text-center">
             laison office
-          </h4>
-          <p className="md:text-[1.375rem] lg:text-base lg:text-center">
+          </h4> */}
+          {/* <p className="md:text-[1.375rem] lg:text-base lg:text-center"> */}
             {/* Suite 23 Nugle complex, Minna, Niger State. */}
-            ********************************************
-          </p>
+            {/* ******************************************** */}
+          {/* </p> */}
         </div>
         <div className="services text-white p-2">
           <h3 className="capitalize mb-10 font-bold text-lg md:text-2xl lg:text-center lg:text-xl">
@@ -83,11 +83,11 @@ const Footer = () => {
         </div>
         <div className="flex flex-row gap-2 items-center my-3">
           <PhoneIcon className='text-white' />
-          <Link href='tel:08137960202'> 08137960202</Link>
+          <Link href='tel:https://wa.me/+2348137960202'> 08137960202</Link>
         </div>
         <div className="flex flex-row gap-2 items-center my-3">
           <WhatsappIcon />
-          <Link href='tel:08137960202'> 08137960202</Link>
+          <Link href='tel:https://wa.me/+2348137960202'> 08137960202</Link>
         </div>
       </div>
       <div className="text-white p-2 flex flex-row gap-2 items-center mt-28 mb-6 md:justify-between md:text-xl lg:text-base">

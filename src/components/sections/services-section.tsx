@@ -159,13 +159,13 @@ const ServicesSection = ()=>{
                     <div key= { index } className='bg-[#0B7E78] px-2 py-5 my-3'>
                         <div className='lg:grid lg:grid-cols-2 lg:gap-2 lg:px-5 lg:py-4 lg:max-w-[59.375rem] lg:w-full lg:mx-auto lg:my-8'>
                             <div className='text-container p-2'>
-                                <h1 className='text-xl font-bold font-sans md:text-2xl'><span className='uppercase'>save to buy: </span>{ items.title }</h1>
+                                <h1 className='text-xl text-white font-bold font-sans md:text-2xl'><span className='uppercase'>save to buy: </span>{ items.title }</h1>
                                 {
                                     items.list.map((listItem, index)=>(
                                         <ul key={ index } className='my-6'>
-                                            <li className='my-2 md:text-[1.375rem] lg:text-base'>{ listItem.budget }</li>
-                                            <li className='my-2 md:text-[1.375rem] lg:text-base'>{ listItem.discount }</li>
-                                            <li className='my-2 md:text-[1.375rem] lg:text-base'>{ listItem.savings }</li>
+                                            <li className='my-2 text-white md:text-[1.375rem] lg:text-base'>{ listItem.budget }</li>
+                                            <li className='my-2 text-white md:text-[1.375rem] lg:text-base'>{ listItem.discount }</li>
+                                            <li className='my-2 text-white md:text-[1.375rem] lg:text-base'>{ listItem.savings }</li>
                                         </ul>
                                     ))
                                 }
