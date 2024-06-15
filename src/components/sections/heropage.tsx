@@ -196,7 +196,7 @@ const HeroSection = () => {
           </motion.div>
           <motion.div
               initial = {{
-                x: '200%'
+                x: '100%'
               }}
               whileInView={{
                 x: 0,
